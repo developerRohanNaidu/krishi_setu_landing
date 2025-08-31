@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const [showForm, setShowForm] = useState(false);
@@ -17,14 +18,16 @@ export default function Home() {
       {/* Navbar */}
       <header className="flex justify-between items-center px-8 py-4 sticky top-0 bg-green-900 z-50 shadow-md">
         <div className="flex items-center space-x-2">
-          <Image src="/krishi_setu.png" alt="Krishi Setu" width={50} height={50} />
-          <span className="text-xl font-bold">Krishi Setu</span>
+          <Link href="/" className="flex items-center space-x-2">
+            <Image src="/krishi_setu.png" alt="Krishi Setu" width={50} height={50} />
+            <span className="text-xl font-bold">Krishi Setu</span>
+          </Link>
         </div>
         <nav className="space-x-6">
           <a href="#about" className="hover:text-yellow-400">About</a>
           <a href="#how" className="hover:text-yellow-400">How It Works</a>
           <a href="#reels" className="hover:text-yellow-400">Stories</a>
-          <a href="/investments" className="hover:text-yellow-400">Investments</a>
+          <Link href="/investments" className="hover:text-yellow-400">Investments</Link>
           <a href="#contact" className="hover:text-yellow-400">Contact</a>
         </nav>
       </header>
