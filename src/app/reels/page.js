@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft } from "lucide-react";
+import Link from "next/link"; // ✅ Import Link
 
 export default function Reels() {
   const reels = [
@@ -16,17 +17,17 @@ export default function Reels() {
     const container = e.currentTarget;
     const index = Math.round(container.scrollTop / window.innerHeight);
     setCurrentIndex(index);
-  };  
+  };
 
   return (
     <div className="relative h-screen w-screen bg-black overflow-hidden">
-      {/* Back button */}
-      <a
+      {/* ✅ Fixed Back button */}
+      <Link
         href="/"
         className="absolute top-6 left-4 z-50 bg-white/20 hover:bg-white/40 p-2 rounded-full"
       >
         <ChevronLeft className="text-white" size={28} />
-      </a>
+      </Link>
 
       {/* Vertical reels container */}
       <div

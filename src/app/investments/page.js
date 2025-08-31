@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link"; // ✅ Import Link
 
 export default function Investments() {
   const opportunities = [
@@ -10,7 +11,13 @@ export default function Investments() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-green-700 to-green-900 text-white px-6 py-16">
+      {/* ✅ Optional: Back link to home */}
+      <Link href="/" className="text-yellow-300 hover:underline mb-8 inline-block">
+        ← Back to Home
+      </Link>
+
       <h2 className="text-4xl font-bold text-center mb-10">🌾 Investment Opportunities</h2>
+      
       <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {opportunities.map((item, idx) => (
           <motion.div

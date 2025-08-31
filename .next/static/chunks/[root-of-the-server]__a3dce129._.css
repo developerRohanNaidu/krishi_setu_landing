@@ -723,6 +723,10 @@
     display: grid;
   }
 
+  .inline-block {
+    display: inline-block;
+  }
+
   .h-64 {
     height: calc(var(--spacing) * 64);
   }
